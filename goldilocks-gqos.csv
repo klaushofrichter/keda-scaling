@@ -1,0 +1,5 @@
+namespace, kind, name, container-name, container-index, replicas, cpu-request, memory-request, cpu-limit, memory-limit, location-hint
+fluentbit, DaemonSet, fluentbit-fluent-bit, fluent-bit, 0, 1, 15m, 105M, 15m, 105M, fluentbit-values.yaml.template
+goldilocks, Deployment, goldilocks-controller, goldilocks, 0, 1, 23m, 105M, 23m, 105M, goldilocks-values.yaml.template
+goldilocks, Deployment, goldilocks-dashboard, goldilocks, 0, 1, 15m, 105M, 15m, 105M, goldilocks-values.yaml.template
+goldilocks, Deployment, goldilocks-vpa-recommender, vpa, 0, 1, 15m, 105M, 15m, 105M, goldilocks-deploy.sh
