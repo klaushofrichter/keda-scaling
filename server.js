@@ -137,7 +137,7 @@ function shutdown() {
   process.exit()
 }
 
-// setting the readyz to true after the launch timeout triggers this
+// setting the ready flag to true after the launch timeout triggered
 function ready() {
   logger.info("App is ready to receive traffic");
   state.isReady=true;
