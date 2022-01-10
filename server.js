@@ -124,10 +124,6 @@ worker.listen(workerPort, () => {
 process.on('SIGTERM', function onSigterm () {
   logger.info("Got SIGTERM. Graceful shutdown initiated, 10 seconds timeout.");
   state.isReady=false;
-  // Giving application service 10 seconds (more than periodTime x failureThreshhold in the manifest)
-  // No more calls should be coming to this instance after /readyz returns 500 2x 
-  // In this time other cleanup can be done, such as DB connection or files closing.
-  // Good discussion here: https://blog.risingstack.com/graceful-shutdown-node-js-kubernetes/
   setTimeout(shutdown, 10000); 
 })
 
